@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    background-color: rgb(45, 133, 201);
+    color: whitesmoke;
+    justify-content: center;
+}
+h1:hover{
+    cursor: pointer;
+    background-color: aqua;
+    color: gray
+}
+.animation{
+    background-color: rgb(45, 133, 201);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    animation: up-down 0.8s ease infinite alternate both;
+}
+.dot:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.dot:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.dot:nth-child(4) {
+    animation-delay: 0.3s;
+} 
+@keyframes up-down {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+
+.container{
+    height: 300px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: orbit 4s linear infinite;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+@keyframes orbit {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
